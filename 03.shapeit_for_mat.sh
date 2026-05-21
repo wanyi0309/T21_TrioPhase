@@ -15,7 +15,7 @@ CHR="chr21"
 MATERNAL_SAMPLE="T21E6_maternal_blood_2"  # 母亲样本ID
 
 # 主目录（和前面脚本完全一致）
-BASE_DIR="/data/work/06.chr21_phase/new_T21E6"
+BASE_DIR="/data/work/new_T21E6"
 
 # 工具 & 数据目录（你提供的路径）
 SCRIPT_DIR="${BASE_DIR}/all_script"
