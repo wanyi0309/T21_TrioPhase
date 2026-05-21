@@ -13,3 +13,4 @@
 # awk '$7=="EAS"' 20130606_g1k_3202_samples_ped_population.txt  | awk '{print $2}' > EAS_samples.txt
 # bcftools view -S EAS_samples.txt -m2 -M2 -v snps  -Oz  -o EAS.1kGP_high_coverage_Illumina.chr21.filtered.SNV_INDEL_SV_phased_panel.vcf.gz  1kGP_high_coverage_Illumina.chr21.filtered.SNV_INDEL_SV_phased_panel.vcf.gz
 # bcftools index EAS.1kGP_high_coverage_Illumina.chr21.filtered.SNV_INDEL_SV_phased_panel.vcf.gz
+EAS.1kGP_high_coverage_Illumina.chr21.filtered.SNV_INDEL_SV_phased_panel.vcf.gz文件较大无法上传至此，请自行根据链接和命令生成
