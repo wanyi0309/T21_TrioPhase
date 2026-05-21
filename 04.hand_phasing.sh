@@ -41,7 +41,7 @@ FAMILY_VCF="${PHASE_DIR}/${FAMILY_ID}.family.phased.son_het.vcf.gz"
 CHILD_BLOCK_TSV="${PHASE_DIR}/${FAMILY_ID}.family.phased.son_het.${CHILD_SAMPLE}.vcf.gz.block.tsv"
 MAT_BLOCK_TSV="${PHASE_DIR}/${FAMILY_ID}.family.phased.son_het.${MATERNAL_SAMPLE}.vcf.gz.block.tsv"
 PAT_BLOCK_TSV="${PHASE_DIR}/${FAMILY_ID}.family.phased.son_het.${PATERNAL_SAMPLE}.vcf.gz.block.tsv"
-STRICT_BLOCK_TSV="${PHASE_DIR}/strict/${FAMILY_ID}.${CHR}.${CHILD_SAMPLE}.phased.strict.filter.vcf.gz.block.tsv"
+STRICT_BLOCK_TSV="${PHASE_DIR}/strict/strick_blocks_for_default_switch_check.tsv"
 MAT_LINK_FILE="${SHAPEIT_DIR}/mat_block_link_relationship.tsv"
 
 # ==============================================
