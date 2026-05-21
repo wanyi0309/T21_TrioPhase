@@ -16,14 +16,14 @@ MATERNAL_SAMPLE="T21E6_maternal_blood_2" # 母亲样本名 ！！！与gvcf中sa
 PATERNAL_SAMPLE="T21E6_paternal_blood_2" # 父亲样本名 ！！！与gvcf中sample的ID一致
 
 # python脚本目录
-SCRIPT_DIR="/data/work/06.chr21_phase/new_T21E6/all_script/"
+SCRIPT_DIR="/data/work/all_script/"
 
 # 参考基因组
-REF_FA="/Files/chenjin/W202504210003221/reference/WGS_hg38.fa"
+REF_FA="WGS_hg38.fa"
 
 # ======================
 # 和上一步 jointcall 脚本对齐
-BASE_DIR="/data/work/06.chr21_phase/new_T21E6" 
+BASE_DIR="/data/work/new_T21E6" 
 
 # 输入 joint VCF（来自上一步01.data_pre_and_jointcall.sh输出）
 INPUT_JOINT_VCF="${BASE_DIR}/01.jointcall/chr21_mixed_ploidy/${FAMILY_ID}.${CHR}.joint.snps.filtered.pass.vcf.gz"
@@ -41,8 +41,8 @@ THREADS_STRICT=8
 SCRIPT_BLOCK_FILTER="${SCRIPT_DIR}/py_script/001.strict_block_filter_for_default_switcherror.py"
 
 # bcftools / bgzip 路径
-BCFTOOLS="/share/app/bcftools/1.11/bin/bcftools"
-BGZIP="/share/app/htslib/bin/bgzip"
+BCFTOOLS="bcftools"
+BGZIP="bgzip"
 
 # work dir（自动创建）
 WORK_DIR="${BASE_DIR}/02.phase"
