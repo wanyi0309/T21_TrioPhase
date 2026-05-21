@@ -15,7 +15,7 @@ MATERNAL_SAMPLE="T21E6_maternal_blood_2"
 PATERNAL_SAMPLE="T21E6_paternal_blood_2"
 
 # 主目录（和前面全套脚本一致）
-BASE_DIR="/data/work/06.chr21_phase/new_T21E6"
+BASE_DIR="/data/work/new_T21E6"
 
 # 脚本目录（统一存放的位置）
 SCRIPT_DIR="${BASE_DIR}/all_script"
