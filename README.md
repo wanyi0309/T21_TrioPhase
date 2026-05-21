@@ -238,7 +238,7 @@ Main tasks:
 
 1. Clarify paternal haplotype contribution using informative genotype patterns and child phase blocks.
 2. Generate SNP-level statistics before and after paternal clarification.
-3. Clarify maternal haplotype contribution using the maternal block relationship file from Step 03.
+3. Clarify maternal haplotype contribution.
 4. Expand informative SNPs and merge blocks.
 5. Generate the final child haplotype VCF.
 
@@ -340,4 +340,4 @@ ls 04.hand_phasing/03.expand_SNP_and_merge_block/final.child.hap.vcf
 
 ## Citation
 
-If you use this pipeline in a publication or report, please cite the tools used in the workflow, including GATK, WhatsHap, ShapeIt4, SAMtools/BCFtools/HTSlib, and the 1000 Genomes reference panel where applicable.
+
