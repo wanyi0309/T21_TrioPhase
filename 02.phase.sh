@@ -118,8 +118,8 @@ ${BCFTOOLS} index ${FAMILY_ID}.family.phased.son_het.vcf.gz
 # ========== 6. block 统计 ==========
 echo -e "\n[6/7] 生成phase and filter block统计 ..."
 cat ${SAMPLE_LIST} | while read sample; do
-  ${BCFTOOLS} view -s ${sample} ${FAMILY_ID}.family.phased.son_het.vcf.gz -Oz -o tmp.${sample}.vcf.gz
-  whatshap stats tmp.${sample}.vcf.gz --block-list ${FAMILY_ID}.family.phased.son_het.${sample}.vcf.gz.block.tsv > logs/block.stats.${sample}.txt 2>&1
+  ${BCFTOOLS} view -s ${sample} ${FAMILY_ID}.family.phased.son_het.vcf.gz -Oz -o ${FAMILY_ID}.family.phased.son_het.${sample}.vcf.gz
+  whatshap stats ${FAMILY_ID}.family.phased.son_het.${sample}.vcf.gz --block-list ${FAMILY_ID}.family.phased.son_het.${sample}.vcf.gz.block.tsv > logs/block.stats.${sample}.txt 2>&1
   #rm -f tmp.${sample}.vcf.gz
 done
 
