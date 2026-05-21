@@ -9,32 +9,32 @@ set -eo pipefail
 ##############################
 # 修改输入参数
 ##############################
-BASE_DIR="/data/work/06.chr21_phase/new_T21E6"
+BASE_DIR="/data/work/T21E6"
 FAMILY_ID="T21E6"
 CHROM="chr21"
 
 # 原始输入文件路径
 ## 子代数据：二代短读WGS比对结果 + 三代长读WGS比对结果
-CHD_SHORT_READS_BAM="/Files/chenjin/WGS_JIEGUO_BQSR/SC_T21E6_Midbrain_2_1/SC_T21E6_Midbrain_2.bqsr.bam"
-CHD_LONG_READS_BAM="/Files/chenjin/cyclone_jieguo/SC_T21E6_Midbrain_2/SC_T21E6_Midbrain_2.merged.sorted.bam"
+CHD_SHORT_READS_BAM="T21E6_Midbrain_2.bqsr.bam"
+CHD_LONG_READS_BAM="T21E6_Midbrain_2.merged.sorted.bam"
 
 ## 母本数据：三代长读WGS比对结果 + 二代WGS variant call的结果g.vcf
-MAT_LONG_READS_BAM="/Files/chenjin/cyclone_jieguo/T21E6_maternal_blood/T21E6_maternal_blood.merged.sorted.bam"
-MAT_GVCF_INPUT="/Files/chenjin/WGS_JIEGUO_BQSR/T21E6_maternal_blood_2/T21E6_maternal_blood_2.g.vcf.gz"
+MAT_LONG_READS_BAM="T21E6_maternal_blood.merged.sorted.bam"
+MAT_GVCF_INPUT="T21E6_maternal_blood_2.g.vcf.gz"
 
 ## 父本数据：三代长读WGS比对结果 + 二代WGS variant call的结果g.vcf
-PAT_LONG_READS_BAM="/Files/chenjin/WGS_JIEGUO_BQSR/T21E6_paternal_blood_2/T21E6_paternal_blood_2.sort.bam"
-PAT_GVCF_INPUT="/Files/chenjin/WGS_JIEGUO_BQSR/T21E6_paternal_blood_2/T21E6_paternal_blood_2.g.vcf.gz"
+PAT_LONG_READS_BAM="T21E6_paternal_blood_2.sort.bam"
+PAT_GVCF_INPUT="T21E6_paternal_blood_2.g.vcf.gz"
 
 # 参考基因组
-REF="/Files/chenjin/W202504210003221/reference/WGS_hg38.fa"
+REF="WGS_hg38.fa"
 
 # 工具路径
-SAMTOOLS="/share/app/samtools/1.11/bin/samtools"
-BCFTOOLS="/share/app/bcftools/1.11/bin/bcftools"
+SAMTOOLS="samtools"
+BCFTOOLS="bcftools"
 GATK="gatk"
-BGZIP="/share/app/htslib/bin/bgzip"
-TABIX="/share/app/htslib/bin/tabix"
+BGZIP="bgzip"
+TABIX="tabix"
 
 ##############################
 # 目录定义
