@@ -28,7 +28,7 @@ T21_TrioPhase/
 ├── 02.phase.sh                       # WhatsHap-based trio phasing and strict child polyphase
 ├── 03.shapeit_for_mat.sh             # ShapeIt4-assisted maternal haplotype anchoring
 ├── 04.hand_phasing.sh                # Rule-based paternal/maternal haplotype clarification and final VCF generation
-├── README.sh                         # One-command wrapper: run 01 → 02 → 03 → 04
+├── total.sh                         # One-command wrapper: run 01 → 02 → 03 → 04
 ├── py_script/                        # Helper Python scripts used by steps 02–04
 └── shapeit_data/                     # Genetic map and population reference panel information for ShapeIt4
 ```
@@ -94,7 +94,7 @@ Also check the paths to `samtools`, `bcftools`, `GATK`, `bgzip`, `tabix`, `Whats
 After all paths are configured, the full workflow can be launched with:
 
 ```bash
-bash README.sh
+bash total.sh
 ```
 
 This wrapper runs the four main scripts in order:
@@ -332,7 +332,7 @@ vim 03.shapeit_for_mat.sh
 vim 04.hand_phasing.sh
 
 # 2. Run all steps
-bash README.sh
+bash total.sh
 
 # 3. Check final output
 ls 04.hand_phasing/03.expand_SNP_and_merge_block/final.child.hap.vcf
