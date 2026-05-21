@@ -79,6 +79,9 @@ with gzip.open(args.vcf, "rt") as fin, open(args.out, "w", encoding="utf-8") as 
         key = (chrom, pos)
         if key not in snp_block_map:
             continue
+        
+        if pos<13000000:
+            continue
 
         # 获取 block 和单倍型索引
         block = snp_block_map[key]
