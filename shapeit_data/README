@@ -1,0 +1,15 @@
+存放shapeit4用到的遗传图谱和人群数据
+
+遗传图谱下载自https://github.com/odelaneau/shapeit4/tree/master/maps/genetic_maps.b38.tar.gz
+取chr21号染色体文件，并将其中chromosome的名称由21改为chr21
+# tar -zxvf genetic_maps.b38.tar.gz
+# zcat chr21.b38.gmap.gz | awk 'BEGIN{FS="\t";OFS="\t"} $2==21{$2="chr21"} 1' |gzip > chr21.b38.gmap.fixed.gz
+# rm *.b38.gmap.gz
+
+
+人群数据下载自http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20220422_3202_phased_SNV_INDEL_SV/	1kGP_high_coverage_Illumina.chr21.filtered.SNV_INDEL_SV_phased_panel.vcf.gz
+根据http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/20130606_g1k_3202_samples_ped_population.txt的个体信息
+将东亚人群部分取出
+# awk '$7=="EAS"' 20130606_g1k_3202_samples_ped_population.txt  | awk '{print $2}' > EAS_samples.txt
+# bcftools view -S EAS_samples.txt -m2 -M2 -v snps  -Oz  -o EAS.1kGP_high_coverage_Illumina.chr21.filtered.SNV_INDEL_SV_phased_panel.vcf.gz  1kGP_high_coverage_Illumina.chr21.filtered.SNV_INDEL_SV_phased_panel.vcf.gz
+# bcftools index EAS.1kGP_high_coverage_Illumina.chr21.filtered.SNV_INDEL_SV_phased_panel.vcf.gz
