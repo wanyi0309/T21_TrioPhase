@@ -40,7 +40,7 @@ Required command-line tools:
 - `samtools`
 - `bcftools`
 - `bgzip` and `tabix` from HTSlib
-- `GATK`
+- `GATK4`
 - `WhatsHap`
 - `ShapeIt4`
 - `Python 3`
