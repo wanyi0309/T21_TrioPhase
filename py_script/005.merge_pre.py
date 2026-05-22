@@ -49,17 +49,15 @@ def main():
         "chd_col_from_pat"
     ]
 
-    df5 = df5.copy()  # 加这一行，警告全部消失！
+    df5 = df5.copy() 
 
     # 先复制原值到 imp_ 开头的列
     for c in cols:
         df5[f"imp_{c}"] = df5[c].copy()
 
-    # 按 pos 排序（必须按位置排序才能找“最近”）
+    # 按 pos 排序（必须按位置排序才能找最近）
     df5 = df5.sort_values(["step1_newchd_block", "pos"]).reset_index(drop=True)
 
-    # ---------------------
-    # 关键修改：加了 group_keys=False
     # ---------------------
     for c in cols:
         df5[f"imp_{c}"] = df5.groupby("step1_newchd_block", group_keys=False)[f"imp_{c}"].apply(
@@ -75,7 +73,6 @@ def main():
     # 找到这一组里所有 SNP 中最大的 pos → 作为新 block 的 end
     # 把 block 名字统一改成：
     # chr21: 最小 pos - 最大 pos
-
     # --------------------------
     # 1. 按 imp_step2_newblock 分组，计算每个 block 的真实 min_pos 和 max_pos
     # --------------------------
