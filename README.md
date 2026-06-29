@@ -245,10 +245,10 @@ Main tasks:
 Main output:
 
 ```text
-04.hand_phasing/03.expand_SNP_and_merge_block/final.child.hap.vcf
+04.hand_phasing/03.expand_SNP_and_merge_block/final.child.hap.vcf ##pat|mat0|mat1
 ```
 
-This is the final phased child chr21 VCF produced by the pipeline.
+This is the final phased child chr21 VCF produced by the pipeline. 
 
 ## Helper Python scripts
 
