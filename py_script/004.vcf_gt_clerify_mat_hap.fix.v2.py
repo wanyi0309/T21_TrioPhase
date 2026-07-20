@@ -254,8 +254,20 @@ for blk in unique_blocks:
         # ===================== 修复：保留所有位点，只把 step2 设为 NA，不跳过 =====================
         sub = blk_df_full.copy()
         # 所有 step2 注释清空为 NA，但是 vote 完全保留
-        sub["step2_newblock"] = np.nan
-        sub["step2_mat_config"] = np.nan
+        # sub["step2_newblock"] = np.nan
+        # sub["step2_mat_config"] = np.nan
+        sub["step2_newblock"] = pd.Series(
+            pd.NA,
+            index=sub.index,
+            dtype="string"
+        )
+
+        sub["step2_mat_config"] = pd.Series(
+            pd.NA,
+            index=sub.index,
+            dtype="string"
+        )
+        
         sub["chd_col_from_mat0"] = np.nan
         sub["chd_col_from_mat1"] = np.nan
         sub["chd_col_from_pat"] = np.nan
@@ -374,8 +386,19 @@ for blk in unique_blocks:
         sub = blk_df_full[(blk_df_full["pos"] >= left_pos) & (blk_df_full["pos"] <= right_pos)].copy()
 
         # 只给 A/B 加 step2 注释，F 不加（但保留 F 行）
-        sub["step2_newblock"] = np.nan
-        sub["step2_mat_config"] = np.nan
+        # sub["step2_newblock"] = np.nan
+        # sub["step2_mat_config"] = np.nan
+        sub["step2_newblock"] = pd.Series(
+            pd.NA,
+            index=sub.index,
+            dtype="string"
+        )
+
+        sub["step2_mat_config"] = pd.Series(
+            pd.NA,
+            index=sub.index,
+            dtype="string"
+        )
         sub["chd_col_from_mat0"] = np.nan
         sub["chd_col_from_mat1"] = np.nan
         sub["chd_col_from_pat"] = np.nan
